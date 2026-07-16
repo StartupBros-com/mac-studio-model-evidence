@@ -173,8 +173,8 @@ _No corrections for this release._
 This is an independent, evidence-backed evaluation. The links below are
 clearly labeled and separate from the benchmark evidence and verdicts above.
 
-- House of Vibe: https://houseofvibe.ai/?utm_source=houseofvibe.ai&utm_medium=report&utm_campaign=2026-07-dry-run
-- Will Mitchell: https://willmitchell.com/?utm_source=willmitchell.com&utm_medium=report&utm_campaign=2026-07-dry-run
+- [House of Vibe](https://houseofvibe.ai/?utm_source=houseofvibe.ai&utm_medium=report&utm_campaign=2026-07-dry-run)
+- [Will Mitchell](https://willmitchell.com/?utm_source=willmitchell.com&utm_medium=report&utm_campaign=2026-07-dry-run)
 
 Authored reports and verdict prose are licensed CC BY-ND 4.0; code and tooling are MIT.
 <!-- /release:attribution-footer -->
