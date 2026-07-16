@@ -1,0 +1,19 @@
+name: Candidate request
+description: Queue a model for possible future coverage
+title: "Candidate: "
+body:
+  - type: markdown
+    attributes:
+      value: Requests are queued, not promised. No launch-day, out-of-cycle, runtime, or hardware support commitment is implied.
+  - type: input
+    id: model
+    attributes:
+      label: Model and quantization
+    validations:
+      required: true
+  - type: textarea
+    id: relevance
+    attributes:
+      label: Workload relevance
+    validations:
+      required: true

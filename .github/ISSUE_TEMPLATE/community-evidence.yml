@@ -1,0 +1,27 @@
+name: Community evidence
+description: Submit a reproduction for review
+body:
+  - type: input
+    id: provenance
+    attributes:
+      label: Evidence provenance
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: Hardware
+    validations:
+      required: true
+  - type: input
+    id: runtime
+    attributes:
+      label: Runtime
+    validations:
+      required: true
+  - type: textarea
+    id: compatibility
+    attributes:
+      label: Methodology compatibility and result
+    validations:
+      required: true

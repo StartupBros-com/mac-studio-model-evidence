@@ -1,0 +1,9 @@
+# Report license
+
+Except where otherwise noted, authored reports and verdict prose in this repository are licensed under the Creative Commons Attribution-NoDerivatives 4.0 International license.
+
+Copyright 2026 Will Mitchell.
+
+You may share the licensed material in any medium or format, including commercially, provided you give appropriate credit, link to the license, indicate whether changes were made, and do not distribute modified material.
+
+Full legal terms: https://creativecommons.org/licenses/by-nd/4.0/legalcode

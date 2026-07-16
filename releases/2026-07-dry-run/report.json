@@ -1,0 +1,848 @@
+{
+  "reportVersion": "release-report/v1",
+  "releaseId": "2026-07-dry-run",
+  "generatedAt": "2026-07-01T00:00:00.000Z",
+  "verdictMarkdown": "## Verdict\n\nNo model recommendation is publishable from this release dataset. All four public-safe workload families contain current local evidence, but none has a row with complete claim provenance. The release therefore withholds recommendations rather than inferring missing quantization or treating incomplete workload coverage as complete.\n\nThe useful finding this cycle is about evidence readiness: the internal ranking surface has substantial scored evidence, while the release plane correctly refuses to turn opaque model names, runtime identifiers, filenames, or paths into public provenance.\n\n## Interpretation boundaries\n\nReaders may conclude that the release gate can represent current local evidence without promoting incomplete rows into recommendations. Readers may also conclude that explicit quantization provenance and complete workload coverage must be added upstream before these rows support public model recommendations.\n\nReaders may not conclude that an unlisted model performed poorly, that the highest internal rank is a public recommendation, or that encoded strings in model and runtime identifiers establish quantization. This dry run makes no comparative model-quality claim.\n",
+  "families": [
+    {
+      "familyId": "harbor-terminal-workflow-v1",
+      "title": "harbor terminal workflow v1",
+      "whatItMeasures": "How do agent lanes compare on the compact public Harbor terminal workflow pack?",
+      "recommendation": null,
+      "challengers": [
+        {
+          "model": "local-direct-bartowski-deepreinforce-ai-ornith-1-0-397b-gguf-deepreinforce-ai-ornith-1-0-397b",
+          "displayName": "Deepreinforce AI Ornith 1 0.397B",
+          "rank": 1,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-bartowski-prefeitura-rio-rio-3-5-open-397b-gguf-prefeitura-rio-rio-3-5-open-397b",
+          "displayName": "Prefeitura Rio Rio 3 5 Open 397B",
+          "rank": 2,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-jedisct1-mimo-v2-5-coder-q2-mimo-v2-5-coder-q2-00001-of-00016-gguf",
+          "displayName": "Mimo V2 5 Coder (Q2)",
+          "rank": 3,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-stepfun-ai-step-3-7-flash-gguf-bf16-step3-7-flash-bf16-00001-of-00009-gguf",
+          "displayName": "Step3 7 Flash (BF16)",
+          "rank": 4,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-unsloth-kimi-k2-7-code-gguf-ud-q3-k-xl-kimi-k2-7-code-ud-q3-k-xl-00001-of-00011-",
+          "displayName": "Kimi K2 7 Code",
+          "rank": 5,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-unsloth-minimax-m3-gguf-ud-q8-k-xl-minimax-m3-ud-q8-k-xl-00001-of-00011-gguf",
+          "displayName": "K Xl MiniMax M3 Ud Q8 K Xl",
+          "rank": 6,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-6-27b-mtp-gguf-qwen3-6-27b-iq4-xs-gguf",
+          "displayName": "Qwen3.6 27B (IQ4_XS)",
+          "rank": 7,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-5-35b-a3b-mtp-gguf-bf16-qwen3-5-35b-a3b-bf16-00001-of-00002-gguf",
+          "displayName": "Qwen3.5 35B A3b (BF16)",
+          "rank": 8,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 7/8 declared workloads"
+        },
+        {
+          "model": "local-direct-mradermacher-darwin-27b-opus-i1-gguf-darwin-27b-opus-i1-q6-k-gguf",
+          "displayName": "Darwin 27B Opus I1 (Q6_K)",
+          "rank": 9,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 6/8 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-glm-5-2-gguf-ud-q4-k-s-glm-5-2-ud-q4-k-s-00001-of-00010-gguf",
+          "displayName": "GLM 5 2 (UD Q4_K_S)",
+          "rank": 10,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 6/8 declared workloads"
+        },
+        {
+          "model": "local-direct-jackrong-qwopus3-6-27b-v2-gguf-qwopus3-6-27b-v2-q8-0-gguf",
+          "displayName": "Qwopus3 6.27B V2 (Q8_0)",
+          "rank": 11,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 5/8 declared workloads"
+        },
+        {
+          "model": "local-direct-jackrong-qwopus3-6-27b-v2-mtp-gguf-qwopus3-6-27b-v2-mtp-bf16-gguf",
+          "displayName": "Qwopus3 6.27B V2 Mtp (BF16)",
+          "rank": 12,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 3/8 declared workloads"
+        },
+        {
+          "model": "local-direct-jackrong-qwopus3-6-35b-a3b-v1-gguf-qwopus3-6-35b-a3b-v1-q8-0-gguf",
+          "displayName": "Qwopus3 6.35B A3b V1 (Q8_0)",
+          "rank": 13,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 3/8 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-gemma-4-12b-it-gguf-gemma-4-12b-it-ud-q8-k-xl-gguf",
+          "displayName": "Gemma 4.12B It Ud Q8 K Xl",
+          "rank": 14,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 5/8 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-glm-5-1-gguf-ud-q4-k-s-glm-5-1-ud-q4-k-s-00001-of-00010-gguf",
+          "displayName": "GLM 5 1 (UD Q4_K_S)",
+          "rank": 15,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 2/8 declared workloads"
+        },
+        {
+          "model": "local-direct-kimi-k26-ram344-gguf",
+          "displayName": "Kimi K2.6 RAM-344 GGUF (local)",
+          "rank": 16,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-qwen36-27b-neocode-iq4-gguf",
+          "displayName": "Qwen3.6 27B NEO-CODE IQ4 GGUF",
+          "rank": 17,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-teichai-gemma-4-31b-it-claude-opus-distill-gguf-gemma-4-31b-it-claude-opus-disti",
+          "displayName": "Gemma 4.31B It Claude Opus Distill",
+          "rank": 18,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 1/8 declared workloads"
+        },
+        {
+          "model": "local-direct-tencent-hy-mt2-1-8b-gguf-hy-mt2-1-8b-q8-0-gguf",
+          "displayName": "HY MT2 1.8B (Q8_0)",
+          "rank": 19,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 2/8 declared workloads"
+        },
+        {
+          "model": "local-direct-tencent-hy-mt2-7b-gguf-hy-mt2-7b-q8-0-gguf",
+          "displayName": "HY MT2 7B (Q8_0)",
+          "rank": 20,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 1/8 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-gemma-4-12b-it-gguf-gemma-4-12b-it-bf16-gguf",
+          "displayName": "Gemma 4.12B It (BF16)",
+          "rank": 21,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 1/8 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-gemma-4-12b-it-qat-gguf-gemma-4-12b-it-qat-ud-q4-k-xl-gguf",
+          "displayName": "Gemma 4.12B It Qat Ud Q4 K Xl",
+          "rank": 22,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 3/8 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-5-397b-a17b-mtp-gguf-ud-q8-k-xl-qwen3-5-397b-a17b-ud-q8-k-xl-00001",
+          "displayName": "Qwen3.5 397B A17b Mtp",
+          "rank": 23,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 1/8 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-coder-next-gguf-qwen3-coder-next-ud-iq4-xs-gguf",
+          "displayName": "Qwen3 Coder Next (UD IQ4_XS)",
+          "rank": 24,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        }
+      ]
+    },
+    {
+      "familyId": "public-anchor-swebench-holdout-v1",
+      "title": "public anchor swebench holdout v1",
+      "whatItMeasures": "How does a contender perform on the pinned SWE-bench holdout anchor?",
+      "recommendation": null,
+      "challengers": [
+        {
+          "model": "local-direct-anserwise-awaxis-kr-31b-model-00001-of-00003-safetensors",
+          "displayName": "Awaxis Kr 31B",
+          "rank": 1,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 7/8 declared workloads"
+        },
+        {
+          "model": "local-direct-bartowski-deepreinforce-ai-ornith-1-0-397b-gguf-deepreinforce-ai-ornith-1-0-397b",
+          "displayName": "Deepreinforce AI Ornith 1 0.397B",
+          "rank": 2,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 7/8 declared workloads"
+        },
+        {
+          "model": "local-direct-bartowski-prefeitura-rio-rio-3-5-open-397b-gguf-prefeitura-rio-rio-3-5-open-397b",
+          "displayName": "Prefeitura Rio Rio 3 5 Open 397B",
+          "rank": 3,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 7/8 declared workloads"
+        },
+        {
+          "model": "local-direct-eemin-carnice-v2-27b-model-00001-of-00015-safetensors",
+          "displayName": "Carnice V2 27B",
+          "rank": 4,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 5/8 declared workloads"
+        },
+        {
+          "model": "local-direct-glm52-oq4e-mtp",
+          "displayName": "Local Direct Glm52 Oq4e Mtp",
+          "rank": 5,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 1/8 declared workloads"
+        },
+        {
+          "model": "local-direct-google-gemma-4-31b-it-model-00001-of-00002-safetensors",
+          "displayName": "Gemma 4.31B It",
+          "rank": 6,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-inferencerlabs-kimi-k2-6-mlx-3-5bit-inf-model-00001-of-00047-safetensors",
+          "displayName": "Kimi K2.6 MLX 3 5bit Inf",
+          "rank": 7,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 3/8 declared workloads"
+        },
+        {
+          "model": "local-direct-jackrong-qwopus3-6-35b-a3b-v1-gguf-qwopus3-6-35b-a3b-v1-q8-0-gguf",
+          "displayName": "Qwopus3 6.35B A3b V1 (Q8_0)",
+          "rank": 8,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-mlx-community-kimi-k2-6-mlx-dq3-k-m-q8-model-00001-of-00099-safetensors",
+          "displayName": "Community Kimi K2.6 MLX DQ3 K M (Q8)",
+          "rank": 9,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 7/8 declared workloads"
+        },
+        {
+          "model": "local-direct-mlx-community-qwen3-5-35b-a3b-4bit-model-00001-of-00004-safetensors",
+          "displayName": "Community Qwen3.5 35B A3b 4bit",
+          "rank": 10,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 1/8 declared workloads"
+        },
+        {
+          "model": "local-direct-morikomorizz-glm-collection-mxfp4-glm-5-2-mixq-mxfp4-00001-of-00010-gguf",
+          "displayName": "GLM Collection Mxfp4 GLM 5 2 Mixq Mxfp4",
+          "rank": 11,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 1/8 declared workloads"
+        },
+        {
+          "model": "local-direct-spicyneuron-kimi-k2-7-code-mlx-3-6bit-model-00001-of-00092-safetensors",
+          "displayName": "Kimi K2 7 Code MLX 3 6bit",
+          "rank": 12,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 7/8 declared workloads"
+        },
+        {
+          "model": "local-direct-spicyneuron-nex-n2-pro-mlx-5-3bit-vision-model-00001-of-00062-safetensors",
+          "displayName": "Nex N2 Pro MLX 5 3bit Vision",
+          "rank": 13,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 5/8 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-glm-5-1-gguf-ud-q4-k-s-glm-5-1-ud-q4-k-s-00001-of-00010-gguf",
+          "displayName": "GLM 5 1 (UD Q4_K_S)",
+          "rank": 14,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 2/8 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-glm-5-2-gguf-ud-q4-k-s-glm-5-2-ud-q4-k-s-00001-of-00010-gguf",
+          "displayName": "GLM 5 2 (UD Q4_K_S)",
+          "rank": 15,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 6/8 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-kimi-k2-7-code-gguf-ud-q3-k-xl-kimi-k2-7-code-ud-q3-k-xl-00001-of-00011-",
+          "displayName": "Kimi K2 7 Code",
+          "rank": 16,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 3/8 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-minimax-m3-gguf-ud-q5-k-xl-minimax-m3-ud-q5-k-xl-00001-of-00008-gguf",
+          "displayName": "K Xl MiniMax M3 Ud Q5 K Xl",
+          "rank": 17,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 7/8 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-5-397b-a17b-mtp-gguf-ud-q8-k-xl-qwen3-5-397b-a17b-ud-q8-k-xl-00001",
+          "displayName": "Qwen3.5 397B A17b Mtp",
+          "rank": 18,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-jackrong-qwopus3-6-27b-v2-gguf-qwopus3-6-27b-v2-q8-0-gguf",
+          "displayName": "Qwopus3 6.27B V2 (Q8_0)",
+          "rank": 19,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 7/8 declared workloads"
+        },
+        {
+          "model": "local-direct-google-gemma-4-26b-a4b-it-model-00001-of-00002-safetensors",
+          "displayName": "Gemma 4.26B A4b It",
+          "rank": 20,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 7/8 declared workloads"
+        },
+        {
+          "model": "local-direct-kimi-k26-ram344-gguf",
+          "displayName": "Kimi K2.6 RAM-344 GGUF (local)",
+          "rank": 21,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 6/8 declared workloads"
+        },
+        {
+          "model": "local-direct-baa-ai-glm-5-2-ram-307gb-gguf-glm-5-2-ram-local-knee-00001-of-00007-gguf",
+          "displayName": "GLM 5 2 Ram Local Knee",
+          "rank": 22,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 5/8 declared workloads"
+        },
+        {
+          "model": "local-direct-jackrong-qwopus3-6-27b-v2-mtp-gguf-qwopus3-6-27b-v2-mtp-bf16-gguf",
+          "displayName": "Qwopus3 6.27B V2 Mtp (BF16)",
+          "rank": 23,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 7/8 declared workloads"
+        },
+        {
+          "model": "local-direct-stepfun-ai-step-3-7-flash-gguf-bf16-step3-7-flash-bf16-00001-of-00009-gguf",
+          "displayName": "Step3 7 Flash (BF16)",
+          "rank": 24,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 7/8 declared workloads"
+        },
+        {
+          "model": "local-direct-mradermacher-darwin-27b-opus-i1-gguf-darwin-27b-opus-i1-q6-k-gguf",
+          "displayName": "Darwin 27B Opus I1 (Q6_K)",
+          "rank": 25,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 5/8 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-6-27b-mtp-gguf-qwen3-6-27b-iq4-nl-gguf",
+          "displayName": "Qwen3.6 27B (IQ4_NL)",
+          "rank": 26,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 7/8 declared workloads"
+        },
+        {
+          "model": "local-direct-teichai-gemma-4-31b-it-claude-opus-distill-gguf-gemma-4-31b-it-claude-opus-disti",
+          "displayName": "Gemma 4.31B It Claude Opus Distill",
+          "rank": 27,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-jedisct1-mimo-v2-5-coder-q2-mimo-v2-5-coder-q2-00001-of-00016-gguf",
+          "displayName": "Mimo V2 5 Coder (Q2)",
+          "rank": 28,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 7/8 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-6-27b-mtp-gguf-qwen3-6-27b-iq4-xs-gguf",
+          "displayName": "Qwen3.6 27B (IQ4_XS)",
+          "rank": 29,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 7/8 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-coder-next-gguf-qwen3-coder-next-ud-iq4-xs-gguf",
+          "displayName": "Qwen3 Coder Next (UD IQ4_XS)",
+          "rank": 30,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 7/8 declared workloads"
+        },
+        {
+          "model": "local-direct-qwen36-27b-neocode-iq4-gguf",
+          "displayName": "Qwen3.6 27B NEO-CODE IQ4 GGUF",
+          "rank": 31,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 7/8 declared workloads"
+        },
+        {
+          "model": "local-direct-morikomorizz-nex-n2-pro-mtp-gguf-iq4-nl-nex-n2-pro-iq4-nl-00001-of-00023-gguf",
+          "displayName": "Nex N2 Pro (IQ4_NL)",
+          "rank": 32,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 3/8 declared workloads"
+        },
+        {
+          "model": "local-direct-tencent-hy-mt2-1-8b-gguf-hy-mt2-1-8b-q8-0-gguf",
+          "displayName": "HY MT2 1.8B (Q8_0)",
+          "rank": 33,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 3/8 declared workloads"
+        }
+      ]
+    },
+    {
+      "familyId": "public-anchor-swebench-mini-v1",
+      "title": "public anchor swebench mini v1",
+      "whatItMeasures": "How does a contender perform on the pinned SWE-bench mini public anchor?",
+      "recommendation": null,
+      "challengers": [
+        {
+          "model": "local-direct-kimi-k26-ram344-gguf",
+          "displayName": "Kimi K2.6 RAM-344 GGUF (local)",
+          "rank": 1,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-anserwise-awaxis-kr-31b-model-00001-of-00003-safetensors",
+          "displayName": "Awaxis Kr 31B",
+          "rank": 2,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-baa-ai-glm-5-2-ram-307gb-gguf-glm-5-2-ram-local-knee-00001-of-00007-gguf",
+          "displayName": "GLM 5 2 Ram Local Knee",
+          "rank": 3,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 5/8 declared workloads"
+        },
+        {
+          "model": "local-direct-bartowski-deepreinforce-ai-ornith-1-0-397b-gguf-deepreinforce-ai-ornith-1-0-397b",
+          "displayName": "Deepreinforce AI Ornith 1 0.397B",
+          "rank": 4,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 6/8 declared workloads"
+        },
+        {
+          "model": "local-direct-bartowski-prefeitura-rio-rio-3-5-open-397b-gguf-prefeitura-rio-rio-3-5-open-397b",
+          "displayName": "Prefeitura Rio Rio 3 5 Open 397B",
+          "rank": 5,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 7/8 declared workloads"
+        },
+        {
+          "model": "local-direct-google-gemma-4-31b-it-model-00001-of-00002-safetensors",
+          "displayName": "Gemma 4.31B It",
+          "rank": 6,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-jackrong-qwopus3-6-27b-v2-gguf-qwopus3-6-27b-v2-q8-0-gguf",
+          "displayName": "Qwopus3 6.27B V2 (Q8_0)",
+          "rank": 7,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-jackrong-qwopus3-6-35b-a3b-v1-gguf-qwopus3-6-35b-a3b-v1-q8-0-gguf",
+          "displayName": "Qwopus3 6.35B A3b V1 (Q8_0)",
+          "rank": 8,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-jedisct1-mimo-v2-5-coder-q2-mimo-v2-5-coder-q2-00001-of-00016-gguf",
+          "displayName": "Mimo V2 5 Coder (Q2)",
+          "rank": 9,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-mlx-community-kimi-k2-6-mlx-dq3-k-m-q8-model-00001-of-00099-safetensors",
+          "displayName": "Community Kimi K2.6 MLX DQ3 K M (Q8)",
+          "rank": 10,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 7/8 declared workloads"
+        },
+        {
+          "model": "local-direct-spicyneuron-kimi-k2-7-code-mlx-3-6bit-model-00001-of-00092-safetensors",
+          "displayName": "Kimi K2 7 Code MLX 3 6bit",
+          "rank": 11,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 6/8 declared workloads"
+        },
+        {
+          "model": "local-direct-stepfun-ai-step-3-7-flash-gguf-bf16-step3-7-flash-bf16-00001-of-00009-gguf",
+          "displayName": "Step3 7 Flash (BF16)",
+          "rank": 12,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-unsloth-minimax-m3-gguf-ud-q8-k-xl-minimax-m3-ud-q8-k-xl-00001-of-00011-gguf",
+          "displayName": "K Xl MiniMax M3 Ud Q8 K Xl",
+          "rank": 13,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 7/8 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-5-397b-a17b-mtp-gguf-ud-q8-k-xl-qwen3-5-397b-a17b-ud-q8-k-xl-00001",
+          "displayName": "Qwen3.5 397B A17b Mtp",
+          "rank": 14,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-6-27b-mtp-gguf-bf16-qwen3-6-27b-bf16-00001-of-00002-gguf",
+          "displayName": "Qwen3.6 27B (BF16)",
+          "rank": 15,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-6-27b-mtp-gguf-qwen3-6-27b-iq4-nl-gguf",
+          "displayName": "Qwen3.6 27B (IQ4_NL)",
+          "rank": 16,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-6-27b-mtp-gguf-qwen3-6-27b-iq4-xs-gguf",
+          "displayName": "Qwen3.6 27B (IQ4_XS)",
+          "rank": 17,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-6-27b-mtp-gguf-qwen3-6-27b-q3-k-m-gguf",
+          "displayName": "Qwen3.6 27B (Q3_K_M)",
+          "rank": 18,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 1/8 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-6-27b-mtp-gguf-qwen3-6-27b-q4-0-gguf",
+          "displayName": "Qwen3.6 27B (Q4_0)",
+          "rank": 19,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 1/8 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-coder-next-gguf-bf16-qwen3-coder-next-bf16-00001-of-00004-gguf",
+          "displayName": "Qwen3 Coder Next (BF16)",
+          "rank": 20,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-coder-next-gguf-q4-1-qwen3-coder-next-q4-1-00001-of-00003-gguf",
+          "displayName": "Qwen3 Coder Next (Q4_1)",
+          "rank": 21,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-coder-next-gguf-qwen3-coder-next-ud-iq4-xs-gguf",
+          "displayName": "Qwen3 Coder Next (UD IQ4_XS)",
+          "rank": 22,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-mradermacher-darwin-27b-opus-i1-gguf-darwin-27b-opus-i1-q6-k-gguf",
+          "displayName": "Darwin 27B Opus I1 (Q6_K)",
+          "rank": 23,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 6/8 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-glm-5-2-gguf-ud-q4-k-s-glm-5-2-ud-q4-k-s-00001-of-00010-gguf",
+          "displayName": "GLM 5 2 (UD Q4_K_S)",
+          "rank": 24,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 6/8 declared workloads"
+        },
+        {
+          "model": "local-direct-google-gemma-4-26b-a4b-it-model-00001-of-00002-safetensors",
+          "displayName": "Gemma 4.26B A4b It",
+          "rank": 25,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 4/8 declared workloads"
+        },
+        {
+          "model": "local-direct-jackrong-qwopus3-6-27b-v2-mtp-gguf-qwopus3-6-27b-v2-mtp-bf16-gguf",
+          "displayName": "Qwopus3 6.27B V2 Mtp (BF16)",
+          "rank": 26,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 4/8 declared workloads"
+        },
+        {
+          "model": "local-direct-qwen36-27b-neocode-iq4-gguf",
+          "displayName": "Qwen3.6 27B NEO-CODE IQ4 GGUF",
+          "rank": 27,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile)"
+        },
+        {
+          "model": "local-direct-teichai-gemma-4-31b-it-claude-opus-distill-gguf-gemma-4-31b-it-claude-opus-disti",
+          "displayName": "Gemma 4.31B It Claude Opus Distill",
+          "rank": 28,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 4/8 declared workloads"
+        },
+        {
+          "model": "local-direct-tencent-hy-mt2-1-8b-gguf-hy-mt2-1-8b-q8-0-gguf",
+          "displayName": "HY MT2 1.8B (Q8_0)",
+          "rank": 29,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 1/8 declared workloads"
+        }
+      ]
+    },
+    {
+      "familyId": "swebench-verified-v1",
+      "title": "swebench verified v1",
+      "whatItMeasures": "How does a contender perform on the full SWE-bench Verified set?",
+      "recommendation": null,
+      "challengers": [
+        {
+          "model": "local-direct-teichai-gemma-4-31b-it-claude-opus-distill-gguf-gemma-4-31b-it-claude-opus-disti",
+          "displayName": "Gemma 4.31B It Claude Opus Distill",
+          "rank": 1,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 35/51 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-gemma-4-12b-it-gguf-gemma-4-12b-it-bf16-gguf",
+          "displayName": "Gemma 4.12B It (BF16)",
+          "rank": 2,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 35/51 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-gemma-4-12b-it-gguf-gemma-4-12b-it-ud-q8-k-xl-gguf",
+          "displayName": "Gemma 4.12B It Ud Q8 K Xl",
+          "rank": 3,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 30/51 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-minimax-m3-gguf-ud-q8-k-xl-minimax-m3-ud-q8-k-xl-00001-of-00011-gguf",
+          "displayName": "K Xl MiniMax M3 Ud Q8 K Xl",
+          "rank": 4,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 34/51 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-coder-next-gguf-q4-1-qwen3-coder-next-q4-1-00001-of-00003-gguf",
+          "displayName": "Qwen3 Coder Next (Q4_1)",
+          "rank": 5,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 31/51 declared workloads"
+        },
+        {
+          "model": "local-direct-spicyneuron-kimi-k2-7-code-mlx-3-6bit-model-00001-of-00092-safetensors",
+          "displayName": "Kimi K2 7 Code MLX 3 6bit",
+          "rank": 6,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 35/51 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-5-397b-a17b-mtp-gguf-ud-q8-k-xl-qwen3-5-397b-a17b-ud-q8-k-xl-00001",
+          "displayName": "Qwen3.5 397B A17b Mtp",
+          "rank": 7,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 35/51 declared workloads"
+        },
+        {
+          "model": "local-direct-mlx-community-kimi-k2-6-mlx-dq3-k-m-q8-model-00001-of-00099-safetensors",
+          "displayName": "Community Kimi K2.6 MLX DQ3 K M (Q8)",
+          "rank": 8,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 29/51 declared workloads"
+        },
+        {
+          "model": "local-direct-stepfun-ai-step-3-7-flash-gguf-bf16-step3-7-flash-bf16-00001-of-00009-gguf",
+          "displayName": "Step3 7 Flash (BF16)",
+          "rank": 9,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 31/51 declared workloads"
+        },
+        {
+          "model": "local-direct-anserwise-awaxis-kr-31b-model-00001-of-00003-safetensors",
+          "displayName": "Awaxis Kr 31B",
+          "rank": 10,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 31/51 declared workloads"
+        },
+        {
+          "model": "local-direct-google-gemma-4-31b-it-model-00001-of-00002-safetensors",
+          "displayName": "Gemma 4.31B It",
+          "rank": 11,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 35/51 declared workloads"
+        },
+        {
+          "model": "local-direct-bartowski-prefeitura-rio-rio-3-5-open-397b-gguf-prefeitura-rio-rio-3-5-open-397b",
+          "displayName": "Prefeitura Rio Rio 3 5 Open 397B",
+          "rank": 12,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 29/51 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-glm-5-2-gguf-ud-q4-k-s-glm-5-2-ud-q4-k-s-00001-of-00010-gguf",
+          "displayName": "GLM 5 2 (UD Q4_K_S)",
+          "rank": 13,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 46/51 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-6-27b-mtp-gguf-qwen3-6-27b-q4-0-gguf",
+          "displayName": "Qwen3.6 27B (Q4_0)",
+          "rank": 14,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 17/51 declared workloads"
+        },
+        {
+          "model": "local-direct-jackrong-qwopus3-6-27b-v2-mtp-gguf-qwopus3-6-27b-v2-mtp-bf16-gguf",
+          "displayName": "Qwopus3 6.27B V2 Mtp (BF16)",
+          "rank": 15,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 15/51 declared workloads"
+        },
+        {
+          "model": "local-direct-jackrong-qwopus3-6-35b-a3b-v1-gguf-qwopus3-6-35b-a3b-v1-q8-0-gguf",
+          "displayName": "Qwopus3 6.35B A3b V1 (Q8_0)",
+          "rank": 16,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 35/51 declared workloads"
+        },
+        {
+          "model": "local-direct-jackrong-qwopus3-6-27b-v2-gguf-qwopus3-6-27b-v2-q8-0-gguf",
+          "displayName": "Qwopus3 6.27B V2 (Q8_0)",
+          "rank": 17,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 31/51 declared workloads"
+        },
+        {
+          "model": "local-direct-kimi-k26-ram344-gguf",
+          "displayName": "Kimi K2.6 RAM-344 GGUF (local)",
+          "rank": 18,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 31/51 declared workloads"
+        },
+        {
+          "model": "local-direct-jedisct1-mimo-v2-5-coder-q2-mimo-v2-5-coder-q2-00001-of-00016-gguf",
+          "displayName": "Mimo V2 5 Coder (Q2)",
+          "rank": 19,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 31/51 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-coder-next-gguf-qwen3-coder-next-ud-iq4-xs-gguf",
+          "displayName": "Qwen3 Coder Next (UD IQ4_XS)",
+          "rank": 20,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 31/51 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-6-27b-mtp-gguf-qwen3-6-27b-iq4-xs-gguf",
+          "displayName": "Qwen3.6 27B (IQ4_XS)",
+          "rank": 21,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 31/51 declared workloads"
+        },
+        {
+          "model": "local-direct-qwen36-27b-neocode-iq4-gguf",
+          "displayName": "Qwen3.6 27B NEO-CODE IQ4 GGUF",
+          "rank": 22,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 31/51 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-6-27b-mtp-gguf-qwen3-6-27b-iq4-nl-gguf",
+          "displayName": "Qwen3.6 27B (IQ4_NL)",
+          "rank": 23,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 31/51 declared workloads"
+        },
+        {
+          "model": "local-direct-google-gemma-4-26b-a4b-it-model-00001-of-00002-safetensors",
+          "displayName": "Gemma 4.26B A4b It",
+          "rank": 24,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 31/51 declared workloads"
+        },
+        {
+          "model": "local-direct-unsloth-qwen3-6-27b-mtp-gguf-qwen3-6-27b-q3-k-m-gguf",
+          "displayName": "Qwen3.6 27B (Q3_K_M)",
+          "rank": 25,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 2/51 declared workloads"
+        },
+        {
+          "model": "local-direct-manojb-mistralai-devstral-small-2-24b-instruct-2512-q4-0-gguf-mistralai-devstral",
+          "displayName": "Mistralai Devstral Small 2.24B Instruct 2512 Q4 0",
+          "rank": 26,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 31/51 declared workloads"
+        },
+        {
+          "model": "local-direct-mradermacher-darwin-27b-opus-i1-gguf-darwin-27b-opus-i1-q6-k-gguf",
+          "displayName": "Darwin 27B Opus I1 (Q6_K)",
+          "rank": 27,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 42/51 declared workloads"
+        },
+        {
+          "model": "local-direct-tencent-hy-mt2-1-8b-gguf-hy-mt2-1-8b-q8-0-gguf",
+          "displayName": "HY MT2 1.8B (Q8_0)",
+          "rank": 28,
+          "claimReady": false,
+          "limitation": "not claim-ready (quantization, hardwareProfile, workloadCoverage); covered 17/51 declared workloads"
+        }
+      ]
+    }
+  ],
+  "whatChanged": {
+    "previousReleaseId": null,
+    "championFlips": [],
+    "newFamilies": [],
+    "removedFamilies": []
+  },
+  "corrections": {
+    "pending": false,
+    "entries": []
+  }
+}
